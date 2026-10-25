@@ -5,8 +5,9 @@
   <meta name="keywords" content="Online Pneumatic Simulator Schematic Picuino Open-source">
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="eulab-version" content="0.3.1">
   <meta name="description" content="Interactive pneumatic circuit simulator designed for secondary school students and teachers. Build, test, and visualize pneumatic systems online. Free, accurate, and ready for classroom use. By Picuino.">
-  <title>EuLab Neumática · basado en Picuino</title>
+  <title>EuLab Neumática v0.3.1 · basado en Picuino</title>
 
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
@@ -467,9 +468,9 @@ body.eu-sidebar-closed #canvas{margin-left:0}
   </nav>
 
 
-  <button type="button" id="eulab-toggle" aria-controls="eulab-sidebar" aria-expanded="true">☰ Componentes</button>
+  <button type="button" id="eulab-toggle" aria-controls="eulab-sidebar" aria-expanded="true">☰ EuLab · Componentes</button>
   <aside id="eulab-sidebar" aria-label="Biblioteca neumática">
-    <div class="eu-head"><strong>EuLab · Neumática</strong><small>Biblioteca de símbolos del simulador Picuino</small></div>
+    <div class="eu-head"><strong>EuLab · Neumática v0.3.1</strong><small>Biblioteca de símbolos del simulador Picuino</small></div>
     <div id="eulab-catalog"></div>
     <div class="eu-foot">Elige un componente y toca el lienzo para insertarlo. Usa «Tubería» para conectar puertos. Simulación y símbolos originales de Picuino, GPL-3.0-or-later.</div>
   </aside>
@@ -5341,7 +5342,7 @@ function closeConfirm() {
   });catalog.append(group);
  });
  const toggle=document.getElementById('eulab-toggle');
- function updateButton(){ const open=document.body.classList.contains('eu-sidebar-open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕ Componentes':'☰ Componentes'; }
+ function updateButton(){ const open=document.body.classList.contains('eu-sidebar-open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕ EuLab · Componentes':'☰ EuLab · Componentes'; }
  function apply(initial=false){ if(initial){document.body.classList.add(matchMedia('(max-width:850px)').matches?'eu-sidebar-closed':'eu-sidebar-open')};updateButton(); }
  toggle.addEventListener('click',()=>{document.body.classList.toggle('eu-sidebar-open');document.body.classList.toggle('eu-sidebar-closed');updateButton();window.dispatchEvent(new Event('resize'))});
  apply(true);
